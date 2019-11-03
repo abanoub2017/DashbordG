@@ -1,0 +1,101 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)"  class="shadow-lg my-3 p-3 rounded">
+  <div class="form-group">
+      <label >First Name</label>
+      <input
+          required
+          type="text"
+          class="form-control"
+          placeholder="Firstname"
+          #firstName = "ngModel"
+          [(ngModel)]="model.firstName"
+          name="firstName"
+          [ngClass]="{'is-invalid': f.submitted && firstName.invalid}"
+          >
+          <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+            <p *ngIf="firstName?.errors.required">This Filed Is required</p>
+
+          </div>
+    </div>
+
+    <div class="form-group">
+        <label >Last Name</label>
+        <input
+            type="text"
+            class="form-control"
+            placeholder="last Name"
+            #lastName= "ngModel"
+            [(ngModel)]="model.lastName"
+            name="last name"
+            required
+            minlength="4"
+            maxlength="15"
+            [ngClass]="{'is-invalid': f.submitted && lastName.invalid}"
+            >
+            <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+              <p *ngIf="lastName?.errors.required"> This fild is Requrid</p>
+              <p *ngIf="lastName?.errors.minlength"> min must be 4 car</p>
+            </div>
+
+      </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input
+        type="email"
+        class="form-control"
+        placeholder="Enter email"
+        #email="ngModel"
+        [(ngModel)]="model.email"
+        name="email"
+        required
+        pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
+        [ngClass]="{'is-invalid': f.submitted && email.invalid}"
+        >
+        <div class="invalid-feedback" *ngIf="f.submitted && email.invalid">
+          <p *ngIf="email?.errors.required">Email is Requried</p>
+          <p *ngIf="email?.errors.pattern">Email must be @</p>
+        </div>
+
+
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      placeholder="Password"
+      #password="ngModel"
+      [(ngModel)]="model.password"
+      name="password"
+      required
+      minlength="4"
+      maxlength="15"
+      [ngClass]="{'is-invalid': f.submitted && password.invalid}"
+
+       >
+       <div class="invalid-feedback" *ngIf="f.submitted && password.invalid">
+          <p *ngIf="password?.errors.required">Password is Requried</p>
+          <p *ngIf="password?.errors.minlength"> min must be 4 car</p>
+        </div>
+  </div>
+  <div class="form-group form-check">
+    <input
+     type="checkbox"
+     class="form-check-input"
+     #me="ngModel"
+     [(ngModel)]="model.me"
+     name="me"
+     required
+     [ngClass]="{'is-invalid': f.submitted && me.invalid}"
+    >
+    <label class="form-check-label" >Check me out</label>
+    <div class="invalid-feedback" *ngIf="f.submitted && me.invalid">
+        <p *ngIf="me?.errors.required">Check is Requried</p>
+      </div>
+  </div>
+
+  <button type="submit" class="btn btn-danger" *ngIf="f.invalid" [disabled]="f.invalid" [ngClass]="{'d-none': !f.invalid}">Submit</button>
+  <button type="submit" class="btn btn-success mx-5" *ngIf="!f.invalid"  >Submit</button>
+  <!-- <button type="submit" class="btn btn-primary" (click)="onRest()" >Reset</button> -->
+</form>
