@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## When to Download or Clone Project You Need to Follow Steps
  - npm install
+ - npm i -g  json-server (npm i json-server)
  - json-server --watch backend/database.json --port 3004
  - ng serve --open
 
