@@ -1,0 +1,32 @@
+<div class="main main-raised mt-5">
+    <div class="profile-content  mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto text-center">
+                   <div class="profile">
+                        <div class="avatar" style="margin-top: -34px;" *ngIf="user.photoUrl">
+                            <img style="height:23%; width: 23%;" [src]="user.photoUrl" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                        </div>
+                        <div class="name">
+                            <h3 class="title">{{user.name}}</h3>
+                            <h6>{{user.email}}</h6>
+                            <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"> <img src="../../../assets/socila-imge/icon-google.png"></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description text-center text-muted w-50 text-center m-auto p-2">
+                <p>An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
+            </div>
+            <div class="log-out text-center p-2 ">
+
+                <a style="cursor: pointer; background: #3f51b5;" class="shadow p-2 rounded text-white "  (click)="signOut()" >login out</a>
+            </div>
+
+
+    
+        </div>
+    </div>
+</div>
+

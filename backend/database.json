@@ -1,16 +1,6 @@
 {
   "bugtracking": [
     {
-      "issue_name": "two",
-      "issue_message": "two",
-      "id": 2
-    },
-    {
-      "issue_name": "ad",
-      "issue_message": "asd",
-      "id": 3
-    },
-    {
       "issue_name": "asdasdasdas",
       "issue_message": "adsasdasdasd",
       "id": 4
@@ -24,6 +14,11 @@
       "issue_name": "adas",
       "issue_message": "adsa",
       "id": 6
+    },
+    {
+      "issue_name": "asas",
+      "issue_message": "as",
+      "id": 7
     }
   ]
 }
