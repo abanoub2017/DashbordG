@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { BugService } from './service/bug.service';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

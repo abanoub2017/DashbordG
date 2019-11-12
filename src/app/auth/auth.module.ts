@@ -11,6 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 //Soical Media
 import { SocialLoginModule, AuthServiceConfig } from "angularx-social-login";
 import { GoogleLoginProvider, FacebookLoginProvider  } from "angularx-social-login"; 
+import { AuthGuard } from '../GeneralGurd/login-registration/auth.guard';
+import { WellcomeSocialComponent } from './wellcome-social/wellcome-social.component';
 
 let config = new AuthServiceConfig([
   {
@@ -29,7 +31,7 @@ export function provideConfig() {
 
 
 @NgModule({
-  declarations: [LoginComponent, ProfileComponent],
+  declarations: [LoginComponent, ProfileComponent, WellcomeSocialComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
@@ -41,7 +43,8 @@ export function provideConfig() {
     {
       provide: AuthServiceConfig,
       useFactory: provideConfig
-    }
+    },
+    AuthGuard
   ],
 })
 export class AuthModule { }
