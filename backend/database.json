@@ -16,6 +16,83 @@
       "id": 1,
       "employeName":"Abanob George",
       "email":"test@gmail.com"
+    },
+    {
+      "id":2,
+      "employeName":"abdo agag",
+      "email":"abdo@gmail.com"
+    }
+  ],
+  "challengeOne":[
+    {
+      "id": 1,
+      "price": 10,
+      "name": " Product Name",
+      "offer": 10,
+      "descritpion": "lorem Ipsom 1"
+    },
+    {
+      "id": 2,
+      "price": 20,
+      "name": " Product Name",
+      "offer": 10,
+      "descritpion": "lorem Ipsom 2"
+    },
+    {
+      "id": 3,
+      "price": 30,
+      "name": " Product Name",
+      "offer": 20,
+      "descritpion": "lorem Ipsom 3"
+    },
+    {
+      "id": 4,
+      "price": 40,
+      "name": " Product Name",
+      "offer": 10,
+      "descritpion": "lorem Ipsom 4"
+    },
+    {
+      "id": 5,
+      "price": 50,
+      "name": " Product Name",
+      "offer": 10,
+      "descritpion": "lorem Ipsom 5"
+    },
+    {
+      "id": 6,
+      "price": 60,
+      "name": " Product Name",
+      "offer": 10,
+      "descritpion": "lorem Ipsom 6"
+    },
+    {
+      "id": 7,
+      "price": 70,
+      "name": " Product Name",
+      "offer": 10,
+      "descritpion": "lorem Ipsom 7"
+    },
+    {
+      "id": 8,
+      "price": 80,
+      "name": " Product Name",
+      "offer": 10,
+      "descritpion": "lorem Ipsom 8"
+    },
+    {
+      "id": 9,
+      "price": 90,
+      "name": " Product Name",
+      "offer": 10,
+      "descritpion": "lorem Ipsom 9"
+    },
+    {
+      "id": 10,
+      "price": 100,
+      "name": " Product Name",
+      "offer": 10,
+      "descritpion": "lorem Ipsom 10"
     }
   ]
 }

@@ -1,1 +1,39 @@
-<p>employee-list works!</p>
+<div class="container wrapper">
+    <div class="row">
+  
+        <!-- Employes ble -->
+        <div class="col-md-6 mt-3">
+            <div class="inner">
+                <h3>Employe List</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Employe Name</th>
+                            <th scope="col">Employe Emial</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let emp of allData">
+                            <th scope="row">{{emp.id}}</th>
+                            <td>{{emp.employeName}}</td>
+                            <td>{{emp.email}}</td>
+                            <td>
+                                <button type="button" class="btn btn-info btn-sm move-right mx-2" [routerLink]="['../detials-employes',emp.id]" >View Details</button>
+                                <button type="button" class="btn btn-success btn-sm move-right mx-2" >Edit</button>
+                                <button type="button" class="btn btn-danger btn-sm" >Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- <div class="col-md-6">
+
+            <router-outlet></router-outlet>
+        </div> -->
+  
+    </div>
+  </div>
+  

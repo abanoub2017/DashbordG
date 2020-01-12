@@ -24,7 +24,6 @@ export class EmployesService {
 
   // Get All Data 
   getAllEmploye(): Observable<EmployeeList>{
-
     return  this.httpBody.get<EmployeeList>(`${this.basicUrl}employes`)
     .pipe(
       retry(1),
@@ -40,7 +39,7 @@ export class EmployesService {
   }
 
 
-  // Add Employe By  Data 
+  // Add Employe By Data 
   addEmploy(data: EmployeeList): Observable<EmployeeList>{
     return this.httpBody.post<EmployeeList>(`${this.basicUrl}employes`, JSON.stringify(data), this.httpOptions)
     .pipe(

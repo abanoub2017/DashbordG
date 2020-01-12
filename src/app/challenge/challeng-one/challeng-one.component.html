@@ -1,0 +1,20 @@
+<div class="container-fluid  mt-5">
+  <div class="card m-auto shadow border-0" style="width: 18rem; ">
+    <div class="chal-fun text-center">
+      <i (click)="addOneItem()" class="fas fa-angle-up"></i>
+      <p class="m-0">{{startNumber}}</p>
+      <i (click)="deletOneItem()" class="fas fa-angle-down"></i>
+    </div>
+    <div class="card-body border-top">
+      <h5 class="card-title">Products</h5>
+      <ng-container  class="card-text" *ngFor="let product of allProduct ; let i = index">
+        <a class="d-block btn " (click)="goDetailsPage(product.id)"  *ngIf="i < startNumber">
+          <i class="fas fa-angle-right"></i>
+          <span class="mx-2">{{product?.price}}</span>
+          <span class="mx-2">{{product.name}}</span>
+          <span class="mx-2">{{product.offer}}</span>
+        </a>
+      </ng-container>
+    </div>
+  </div>
+</div>
